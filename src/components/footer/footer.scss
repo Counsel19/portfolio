@@ -1,0 +1,16 @@
+.footer__container{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .9rem;
+    color: #fff;
+    gap: 2rem;
+
+    .socials{
+        display: flex;
+        gap: 1rem;
+        font-size: 1.1rem;
+        color: #969696;
+    }
+}
