@@ -3,14 +3,16 @@ import "./contact.scss";
 import { BsTelephone } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
 import { FiSend } from "react-icons/fi";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const [input, setInput] = useState({
+  const initInput = {
     firstName: "",
     lastName: "",
     email: "",
     message: "",
-  });
+  }
+  const [input, setInput] = useState(initInput);
   const [alertMessage, setAlertMessage] = useState(null);
 
   const handleChange = (e) => {
@@ -32,10 +34,24 @@ const Contact = () => {
       return;
     }
 
-    setAlertMessage({
-      type: "success",
-      message: "Message sent",
-    });
+    emailjs
+      .sendForm("service_uudp1tg", "template_9bkoezf", e.target, "U5G6AzPX9pZLv1LDl")
+      .then(
+        (result) => {
+          console.log(result.text);
+          setAlertMessage({
+            type: "success",
+            message: "Message sent",
+          });
+
+          setInput(initInput)
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    
   };
 
   return (
