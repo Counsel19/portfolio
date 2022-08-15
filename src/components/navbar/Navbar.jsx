@@ -72,29 +72,27 @@ const Navbar = () => {
         {isOpen && (
           <div className="mobile__nav">
             <div className="mobile__navLinks">
-              <GrClose className="close__btn" onClick={toggleMobileNav} />
-              <ul>
-                <Scrollspy
-                  items={["works", "skills", "about", "services", "contact"]}
-                  currentClassName="active"
-                >
-                  <li>
-                    <a href="#works">works</a>
-                  </li>
-                  <li>
-                    <a href="#skills">skills</a>
-                  </li>
-                  <li>
-                    <a href="#about">about me</a>
-                  </li>
-                  <li>
-                    <a href="#services">My services</a>
-                  </li>
-                  <li>
-                    <a href="#contact">contact me</a>
-                  </li>
-                </Scrollspy>
-              </ul>
+              <Scrollspy
+                items={["works", "skills", "about", "services", "contact"]}
+                currentClassName="active"
+              >
+                <GrClose className="close__btn" onClick={toggleMobileNav} />
+                <li>
+                  <a href="#works">works</a>
+                </li>
+                <li>
+                  <a href="#skills">skills</a>
+                </li>
+                <li>
+                  <a href="#about">about me</a>
+                </li>
+                <li>
+                  <a href="#services">My services</a>
+                </li>
+                <li>
+                  <a href="#contact">contact me</a>
+                </li>
+              </Scrollspy>
             </div>
           </div>
         )}

@@ -46,12 +46,25 @@
             font-size: 1.2rem;
           }
         }
+
+
+        @media screen and (max-width: 556px) {
+          &{
+            background: $light-color;
+            color: #0a2351;
+            border-radius: .25rem;
+            text-align: center;
+          }
+        }
+
+
         @media screen and (max-width: 346px){
           &{
            display: none;
           }
         }
       }
+
       p {
         font-size: 1.2rem;
         line-height: 1.6rem;
@@ -119,4 +132,10 @@
       padding: 2rem;
     }
   }
+  @media screen and (max-width: 372px) {
+    & {
+      padding: 2rem 1rem;
+    }
+  }
+
 }

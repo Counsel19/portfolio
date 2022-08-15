@@ -15,6 +15,11 @@
         padding: 0 2rem;
       }
     }
+    @media screen and (max-width: 372px) {
+      & {
+        padding: 0 1rem;
+      }
+    }
 
     .socials {
       display: flex;
@@ -27,7 +32,6 @@
           display: none;
         }
       }
-
     }
 
     .nav__brand {
@@ -80,12 +84,11 @@
       color: #969696;
       display: none;
 
-      @media screen and (max-width: 966px){
-          &{
-            display: block;
-          }
+      @media screen and (max-width: 966px) {
+        & {
+          display: block;
+        }
       }
-
     }
 
     .mobile__nav {
@@ -110,26 +113,32 @@
         align-items: center;
         height: 100%;
 
-        .close__btn {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          font-size: 2.3rem;
-          color: #fff;
-          cursor: pointer;
-        }
+       
 
         ul {
           background-color: #fff;
-          height: fit-content;
-          width: 50%;
+          height: 400px;
+          width: 75%;
           border-radius: 0.25rem;
           list-style-type: none;
           padding: 2rem 1rem;
           display: flex;
+          justify-content: center;
+          align-items: center;
           gap: 1rem;
           flex-direction: column;
           color: #969696;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+          position: relative;
+
+          .close__btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2.3rem;
+            color: #fff;
+            cursor: pointer;
+          }
 
           li {
             width: fit-content;

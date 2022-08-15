@@ -73,4 +73,10 @@
       padding: 2rem;
     }
   }
+  @media screen and (max-width: 372px) {
+    & {
+      padding: 0 1rem;
+    }
+  }
+
 }

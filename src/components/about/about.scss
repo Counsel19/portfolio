@@ -18,6 +18,11 @@
         margin-left: 2rem;
       }
     }
+    @media screen and (max-width: 1160px) {
+      & {
+        margin-left: 1rem;
+      }
+    }
   }
 
   .about__details {
